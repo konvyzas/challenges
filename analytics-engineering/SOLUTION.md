@@ -119,21 +119,14 @@ LIMIT 20;
 ```
 ---
 
-## Data Quality Observations (rewrite it)
+## Data Quality Observations
 
-| Issue | Description | Handling |
-|--------|--------------|----------|
-| **Triple‑quoted country codes** | e.g. `"""ES"""` | Trimmed quotes in staging model |
-| **Mixed event schemas** | CSV vs Parquet data slight structure differences | Unified column order and datatypes before load |
-| **Missing consent statuses** | Empty/null CONSENT field | Counted under `empty` status |
-| **Sampled data** | `RATE` < 1 for sampled events | Applied extrapolation `COUNT / RATE` in dbt |
-| **Timestamp mismatches** | Some malformed timestamps | Filtered out invalid rows during ingestion |
-
-All metrics are validated through dbt tests to confirm non‑negative numbers, uniqueness of `company_id`, and valid conversion rate range (`0–1`).
+- Triple‑quoted country codes e.g. `"""ES"""`. Trimmed quotes in staging model.
+- Mixed event schemas CSV vs Parquet data slight structure differences. Unified column order and datatypes before load |
 
 ---
 
-## Architecture Decisions (rewrite it)
+## Architecture Decisions - Caveats - Notes
 
 Data ingestion strategy and rationale
 
@@ -149,17 +142,18 @@ dbt model organization approach
 Trade-offs and important choices
 
 - Keeping transformations in dbt increases transparency and testability, but it does assume a SQL-native transformation workflow and that Postgres can handle the transformation workload.
+- In some cases we could use Macros but tried to keep it simple. For example the extrapolated_count case when we do could be macro, since it make end up being a repetitive need and also a businnes assumption that can change at some point.
+- Deciding to de-duplicate the events to get one asked/ given event per window start is also an important decision. It has many the possibility to be done in many different ways (last event instead of first etc.) and also the logic can be built in int_ssot as a standalone to make easier available in the wider business.
+- We could have different schemas for the different dbt folders but tried to keep it simple. In a bigger dbt project, this could be an approach especially to split the reporting mart for different department that could have different access rights.
+
+Caveats & Notes
+
+- Since data uses company‑specific `RATE`, extrapolated metrics assume representative sampling.  
+- Dataset duration unknown — metrics represent a snapshot, not time trends.  
+- Works efficiently at the dataset size provided; scaling for billions of events would need partitioned or incremental builds.
 
 ---
 
 ## Key Insights
 
----
-
-## Caveats & Notes
-
-- **Sampling bias:** Since data uses company‑specific `RATE`, extrapolated metrics assume representative sampling.  
-- **Temporal limitation:** Dataset duration unknown — metrics represent a snapshot, not time trends.  
-- **Performance:** Works efficiently at the dataset size provided; scaling for billions of events would need partitioned or incremental builds.  
-- **Goals:** Simplicity, auditability, and clarity took precedence over maximum performance.
 ---
