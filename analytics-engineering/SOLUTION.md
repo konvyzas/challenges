@@ -142,15 +142,16 @@ dbt model organization approach
 Trade-offs and important choices
 
 - Keeping transformations in dbt increases transparency and testability, but it does assume a SQL-native transformation workflow and that Postgres can handle the transformation workload.
-- In some cases we could use Macros but tried to keep it simple. For example the extrapolated_count case when we do could be macro, since it make end up being a repetitive need and also a businnes assumption that can change at some point.
-- Deciding to de-duplicate the events to get one asked/ given event per window start is also an important decision. It has many the possibility to be done in many different ways (last event instead of first etc.) and also the logic can be built in int_ssot as a standalone to make easier available in the wider business.
+- In some cases we could use Macros but I've tried to keep it simple. For example, in the "extrapolated_count case" we could use a macro instead, since it may end up being a repetitive need and also a business assumption that can change at some point.
+- Deciding to de-duplicate the events to get one asked/ given event per window start is also an important decision. It has many possibilities to be done in many different ways (last event instead of first etc.) and also the logic can be built in int_ssot as a standalone to make easier available in the wider business.
 - We could have different schemas for the different dbt folders but tried to keep it simple. In a bigger dbt project, this could be an approach especially to split the reporting mart for different department that could have different access rights.
 
 Caveats & Notes
 
 - Since data uses company‑specific `RATE`, extrapolated metrics assume representative sampling.  
 - Dataset duration unknown — metrics represent a snapshot, not time trends.  
-- Works efficiently at the dataset size provided; scaling for billions of events would need partitioned or incremental builds.
+- Works efficiently at the dataset size provided; Also the COPY for postegress can handle a lot of ingestions. Scaling for billions of events would need partitioned or incremental builds.
+- In the Ingestion script we drop all tables and rebuild them. We can discuss have this in the orchestrator or even doing it incrementally as I've mentioned above.
 
 ---
 
