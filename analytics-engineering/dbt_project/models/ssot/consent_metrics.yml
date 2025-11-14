@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: consent__performance_enriched
+  - name: consent_metrics
     description: >
       Final consent performance model per company. Enriches company dimension
       data with consent conversion rate, consent status distribution metrics,
