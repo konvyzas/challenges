@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: company__performance_enriched
+  - name: company_performance
     description: >
       Combines company dimension attributes with performance metrics calculated
       in int_company__performance. Provides a per-company enriched table with

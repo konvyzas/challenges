@@ -5,6 +5,11 @@ models:
     description: >
       Calculates time (in seconds) between the earliest consent request and
       the earliest consent given event, grouped by company_id and window_start.
+    tests:  # The pair company_id + window_start should uniquely identify each row
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - company_id
+            - window_start
 
     columns:
       - name: company_id
@@ -16,11 +21,6 @@ models:
         description: "Event time window (e.g., day/hour)."
         tests:
           - not_null
-
-      # The pair company_id + window_start should uniquely identify each row
-      - tests:
-          - unique:
-              column_name: "(company_id || '-' || window_start)"
 
       - name: asked_at
         description: "Timestamp of the first 'consent.asked' event within the window."
