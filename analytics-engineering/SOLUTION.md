@@ -123,6 +123,7 @@ LIMIT 20;
 
 - Triple‑quoted country codes e.g. `"""ES"""`. Trimmed quotes in staging model.
 - Missing consent statuses in events staging. Corrected it with COALESCE empty.
+- Duplicate event_id in events' files
 - Mixed event schemas CSV vs Parquet data slight structure differences. Unified column order and datatypes before load |
 
 ---
@@ -144,8 +145,10 @@ Trade-offs and important choices
 
 - Keeping transformations in dbt increases transparency and testability, but it does assume a SQL-native transformation workflow and that Postgres can handle the transformation workload.
 - In some cases we could use Macros but I've tried to keep it simple. For example, in the "extrapolated_count case" we could use a macro instead, since it may end up being a repetitive need and also a business assumption that can change at some point.
+- Tests could include accepted values but since we don't have the full thing, I've kept it simple.
 - Deciding to de-duplicate the events to get one asked/ given event per window start is also an important decision. It has many possibilities to be done in many different ways (last event instead of first etc.) and also the logic can be built in int_ssot as a standalone to make easier available in the wider business.
 - We could have different schemas for the different dbt folders but tried to keep it simple. In a bigger dbt project, this could be an approach especially to split the reporting mart for different department that could have different access rights.
+
 
 Caveats & Notes
 
@@ -160,5 +163,6 @@ Caveats & Notes
 
 - Sampling results into having extrapolated counts with a lot of decimals.
 
-
+Note: I have unsolvable issues with writing the tables to the database and be able to read them. For some reason, even though everything runs correctly, I cannot querry the tables from the pgAdmin GUI.
+Hence the insights I've managed to have are minimal.
 ---

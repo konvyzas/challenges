@@ -2,6 +2,16 @@
 
 WITH src AS (SELECT * FROM {{ source('main', 'events') }}),
 
+deduped AS (
+    SELECT 
+        *,
+        ROW_NUMBER() OVER (
+            PARTITION BY event_id 
+            ORDER BY event_time ASC
+        ) AS rn
+    FROM src
+),
+
 typed AS (
     SELECT
         event_id,
@@ -27,8 +37,9 @@ typed AS (
         REGEXP_REPLACE(region, '"""', '', 'g') AS region,
         browser_family,
         device_type
-    FROM src
+    FROM deduped
     WHERE event_id IS NOT NULL
+    AND rn = 1
 )
 
 SELECT 

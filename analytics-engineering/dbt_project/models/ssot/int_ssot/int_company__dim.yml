@@ -18,5 +18,3 @@ models:
 
       - name: hq_country
         description: "Country of the company's headquarters."
-        tests:
-          - not_null

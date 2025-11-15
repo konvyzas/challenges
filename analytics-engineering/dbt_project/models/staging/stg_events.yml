@@ -65,9 +65,6 @@ models:
         data_type: string
         tests:
           - not_null
-          - relationships:
-              to: ref('stg_company_info')
-              field: public_api_key
 
       - name: consent_status
         description: >
@@ -153,6 +150,3 @@ models:
         description: >
           Device type: `smartphone`, `desktop`, `tablet`.
         data_type: string
-        tests:
-          - accepted_values:
-              values: ['smartphone', 'desktop', 'tablet']

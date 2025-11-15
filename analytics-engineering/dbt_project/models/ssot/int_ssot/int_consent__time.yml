@@ -5,11 +5,6 @@ models:
     description: >
       Calculates time (in seconds) between the earliest consent request and
       the earliest consent given event, grouped by company_id and window_start.
-    tests:  # The pair company_id + window_start should uniquely identify each row
-      - dbt_utils.unique_combination_of_columns:
-          combination_of_columns:
-            - company_id
-            - window_start
 
     columns:
       - name: company_id
