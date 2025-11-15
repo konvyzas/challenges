@@ -31,4 +31,7 @@ typed AS (
     WHERE event_id IS NOT NULL
 )
 
-SELECT * FROM typed
+SELECT 
+    *,
+    ROUND(extrapolated_count) AS extrapolated_count_rounded
+FROM typed

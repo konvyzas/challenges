@@ -157,4 +157,7 @@ Caveats & Notes
 
 ## Key Insights
 
+- Sampling results into having extrapolated counts with a lot of decimals.
+
+
 ---

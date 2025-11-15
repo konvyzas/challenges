@@ -5,7 +5,7 @@ WITH events AS (SELECT * FROM {{ ref('stg_events') }}),
 asked AS (
     SELECT
         company_id,
-        SUM(extrapolated_count) AS asked_extrapolated_count
+        SUM(extrapolated_count_rounded) AS asked_extrapolated_count
     FROM events
     WHERE event_type = 'consent.asked'
     GROUP BY 1
@@ -15,7 +15,7 @@ given AS (
 
     SELECT
         company_id,
-        SUM(extrapolated_count) AS given_extrapolated_count
+        SUM(extrapolated_count_rounded) AS given_extrapolated_count
     FROM events
     WHERE event_type = 'consent.given'
     GROUP BY 1

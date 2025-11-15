@@ -6,18 +6,18 @@ WITH events AS (SELECT * FROM {{ ref('stg_events') }}),
     SELECT
         company_id,
         consent_status,
-        extrapolated_count
+        extrapolated_count_rounded
     FROM events
 ),
 
 summaries AS (
     SELECT
         company_id,
-        SUM(extrapolated_count) AS total_events,
+        SUM(extrapolated_count_rounded) AS total_events,
         SUM(
             CASE 
                 WHEN consent_status = 'empty'
-                THEN extrapolated_count
+                THEN extrapolated_count_rounded
                 ELSE 0
             END
             ) AS total_empty_consent_statuses,
@@ -25,14 +25,14 @@ summaries AS (
         SUM(
             CASE 
                 WHEN consent_status = 'full opt-in'
-                THEN extrapolated_count
+                THEN extrapolated_count_rounded
                 ELSE 0
             END
             ) AS total_full_opt_in_consent_statuses,
         SUM(
             CASE 
                 WHEN consent_status = 'partial'
-                THEN extrapolated_count
+                THEN extrapolated_count_rounded
                 ELSE 0
             END
             ) AS total_partial_opt_in_consent_statuses

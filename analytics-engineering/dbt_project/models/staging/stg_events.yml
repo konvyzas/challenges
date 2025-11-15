@@ -91,6 +91,14 @@ models:
           - dbt_utils.expression_is_true:
               expression: "extrapolated_count >= 0"
 
+      - name: extrapolated_count_rounded
+        description: >
+          Count extrapolated using the sampling rate (`sampled_count / rate` when rate > 0) but rounding it to 0 decimals.
+        data_type: float
+        tests:
+          - dbt_utils.expression_is_true:
+              expression: "extrapolated_count >= 0"
+
       - name: experiment
         description: >
           Experiment or A/B test identifier (nullable).
