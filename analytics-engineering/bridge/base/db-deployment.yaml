@@ -51,5 +51,5 @@ spec:
                       mountPath: /var/lib/postgresql/data
             volumes:
                 - name: var-lib-postgresql-data
-                  hostPath:
-                    path: /Users/mac/challenges/analytics-engineering/postgres-data
+                  persistentVolumeClaim:
+                    claimName: db-pg-data

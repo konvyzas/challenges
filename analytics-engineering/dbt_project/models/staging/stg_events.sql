@@ -12,7 +12,7 @@ typed AS (
         CAST(event_time AS TIMESTAMP) AS event_time,
         CAST(window_start AS TIMESTAMP) AS window_start,
         apikey AS company_id,
-        consent AS consent_status,
+        COALESCE(consent,'empty') AS consent_status,
         count AS sampled_count,
         CASE
             WHEN CAST(rate AS FLOAT) > 0

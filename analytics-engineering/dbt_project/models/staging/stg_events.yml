@@ -140,10 +140,9 @@ models:
           Cleaned region code, e.g. `CM`, `MD`.
         data_type: string
         tests:
-          - dbt_utils.length_equal:
-              value: 2
-              config:
-                severity: warn
+          - dbt_utils.expression_is_true:
+              arguments:
+                expression: "char_length(region) = 2"
 
       - name: browser_family
         description: >

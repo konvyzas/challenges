@@ -5,4 +5,5 @@ kind: Kustomization
 resources:
     - ../../base
 patches:
+    - path: db-pg_data-persistentVolumeClaim.yaml
     - path: db-service.yaml

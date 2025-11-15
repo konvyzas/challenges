@@ -69,7 +69,8 @@ models:
           consent given events per company (median across time windows).
         tests:
           - dbt_utils.expression_is_true:
-              expression: "median_seconds_to_consented IS NULL OR median_seconds_to_consented >= 0"
+              arguments:
+                expression: "median_seconds_to_consented IS NULL OR median_seconds_to_consented >= 0"
 
       # --- Dimension attributes (examples, adjust to your real fields) ---
       - name: industry_back

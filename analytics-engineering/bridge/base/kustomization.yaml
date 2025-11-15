@@ -7,5 +7,6 @@ resources:
     - analytics-env-deployment.yaml
     - db-deployment.yaml
     - db-expose.yaml
+    - db-pg_data-persistentVolumeClaim.yaml
     - db-service.yaml
     - default-network-policy.yaml

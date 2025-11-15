@@ -1,3 +1,4 @@
+
 services:
   db:
     image: postgres:14
@@ -5,8 +6,9 @@ services:
       POSTGRES_USER: ae_interview
       POSTGRES_PASSWORD: password
       POSTGRES_DB: analytics_db
+    # use a named volume instead of a host path
     volumes:
-      - ./postgres-data:/var/lib/postgresql/data
+      - pg_data:/var/lib/postgresql/data
     ports:
       - "5432:5432"
     healthcheck:
@@ -22,7 +24,11 @@ services:
         condition: service_healthy
     volumes:
       - ./scripts:/app/scripts
-      - ./input:/app/input  
+      - ./input:/app/input
     working_dir: /app
     tty: true
     command: ["tail", "-f", "/dev/null"]
+
+# declare the named volume at the bottom
+volumes:
+  pg_data:

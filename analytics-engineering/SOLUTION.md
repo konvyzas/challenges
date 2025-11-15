@@ -122,6 +122,7 @@ LIMIT 20;
 ## Data Quality Observations
 
 - Triple‑quoted country codes e.g. `"""ES"""`. Trimmed quotes in staging model.
+- Missing consent statuses in events staging. Corrected it with COALESCE empty.
 - Mixed event schemas CSV vs Parquet data slight structure differences. Unified column order and datatypes before load |
 
 ---
