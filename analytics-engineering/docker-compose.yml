@@ -1,4 +1,3 @@
-
 services:
   db:
     image: postgres:14
@@ -6,11 +5,10 @@ services:
       POSTGRES_USER: ae_interview
       POSTGRES_PASSWORD: password
       POSTGRES_DB: analytics_db
-    # use a named volume instead of a host path
-    volumes:
-      - pg_data:/var/lib/postgresql/data
     ports:
       - "5432:5432"
+    volumes:
+      - pg_data:/var/lib/postgresql/data
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U ae_interview -d analytics_db"]
       interval: 10s
@@ -22,13 +20,24 @@ services:
     depends_on:
       db:
         condition: service_healthy
-    volumes:
-      - ./scripts:/app/scripts
-      - ./input:/app/input
+    # we want /app inside the container == ./dbt_project on the host
     working_dir: /app
     tty: true
     command: ["tail", "-f", "/dev/null"]
 
-# declare the named volume at the bottom
+    volumes:
+      - ./dbt_project:/app          # <- mount the actual dbt project dir
+      - ./profiles:/root/.dbt       # -> where your profiles.yml lives
+      - ./scripts:/app/scripts      # optional for your helper scripts
+      - ./input:/app/input          # optional for input data files, etc.
+
+    environment:
+      DBT_PROFILES_DIR: /root/.dbt
+      POSTGRES_USER: ae_interview
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: analytics_db
+      POSTGRES_HOST: db
+      POSTGRES_PORT: 5432
+
 volumes:
   pg_data:

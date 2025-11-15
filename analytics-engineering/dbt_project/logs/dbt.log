@@ -527,3 +527,1067 @@ There are 1 unused configuration paths:
 [0m12:10:28.438203 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff97bd2e10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff99d7e850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff99d7e950>]}
 [0m12:10:28.438362 [debug] [MainThread]: Flushing usage events
 [0m12:10:28.989938 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:43:43.706982 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8cdb9e90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8a5b5750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8ccafed0>]}
+
+
+============================== 11:43:43.773397 | 28b0c3df-7aeb-4fd4-917c-b13468f0bdf8 ==============================
+[0m11:43:43.773397 [info ] [MainThread]: Running with dbt=1.10.15
+[0m11:43:43.773926 [debug] [MainThread]: running dbt with arguments {'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'partial_parse': 'True', 'cache_selected_only': 'False', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'version_check': 'True', 'debug': 'False', 'introspect': 'True', 'warn_error': 'None', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'log_format': 'default', 'use_colors': 'True', 'empty': 'None', 'quiet': 'False', 'use_experimental_parser': 'False', 'profiles_dir': '/root/.dbt', 'write_json': 'True', 'send_anonymous_usage_stats': 'True', 'log_path': '/app/logs', 'printer_width': '80', 'fail_fast': 'False'}
+[0m11:43:43.799803 [info ] [MainThread]: dbt version: 1.10.15
+[0m11:43:43.800227 [info ] [MainThread]: python version: 3.11.14
+[0m11:43:43.800560 [info ] [MainThread]: python path: /usr/local/bin/python
+[0m11:43:43.800824 [info ] [MainThread]: os info: Linux-6.11.11-linuxkit-aarch64-with-glibc2.41
+[0m11:43:43.834035 [info ] [MainThread]: Using profiles dir at /root/.dbt
+[0m11:43:43.834414 [info ] [MainThread]: Using profiles.yml file at /root/.dbt/profiles.yml
+[0m11:43:43.834805 [info ] [MainThread]: Using dbt_project.yml file at /app/dbt_project.yml
+[0m11:43:43.835291 [info ] [MainThread]: adapter type: postgres
+[0m11:43:43.835497 [info ] [MainThread]: adapter version: 1.8.2
+[0m11:43:43.881016 [info ] [MainThread]: Configuration:
+[0m11:43:43.881321 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m11:43:43.881586 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m11:43:43.881855 [info ] [MainThread]: Required dependencies:
+[0m11:43:43.882122 [debug] [MainThread]: Executing "git --help"
+[0m11:43:43.885025 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m11:43:43.885271 [debug] [MainThread]: STDERR: "b''"
+[0m11:43:43.885467 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m11:43:43.885671 [info ] [MainThread]: Connection:
+[0m11:43:43.885978 [info ] [MainThread]:   host: db
+[0m11:43:43.886191 [info ] [MainThread]:   port: 5432
+[0m11:43:43.886435 [info ] [MainThread]:   user: ae_interview
+[0m11:43:43.886664 [info ] [MainThread]:   database: analytics_db
+[0m11:43:43.886920 [info ] [MainThread]:   schema: main
+[0m11:43:43.887185 [info ] [MainThread]:   connect_timeout: 10
+[0m11:43:43.887401 [info ] [MainThread]:   role: None
+[0m11:43:43.887597 [info ] [MainThread]:   search_path: None
+[0m11:43:43.887798 [info ] [MainThread]:   keepalives_idle: 0
+[0m11:43:43.888016 [info ] [MainThread]:   sslmode: None
+[0m11:43:43.888199 [info ] [MainThread]:   sslcert: None
+[0m11:43:43.888365 [info ] [MainThread]:   sslkey: None
+[0m11:43:43.888543 [info ] [MainThread]:   sslrootcert: None
+[0m11:43:43.888722 [info ] [MainThread]:   application_name: dbt
+[0m11:43:43.888909 [info ] [MainThread]:   retries: 1
+[0m11:43:43.889217 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m11:43:43.923488 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m11:43:43.945155 [debug] [MainThread]: Using postgres connection "debug"
+[0m11:43:43.945408 [debug] [MainThread]: On debug: select 1 as id
+[0m11:43:43.945557 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m11:43:43.966808 [debug] [MainThread]: SQL status: SELECT 1 in 0.021 seconds
+[0m11:43:43.967518 [debug] [MainThread]: On debug: Close
+[0m11:43:43.967761 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m11:43:43.968138 [info ] [MainThread]: [32mAll checks passed![0m
+[0m11:43:43.968940 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 0.2873192, "process_in_blocks": "0", "process_kernel_time": 0.630295, "process_mem_max_rss": "124788", "process_out_blocks": "41108", "process_user_time": 1.685814}
+[0m11:43:43.969439 [debug] [MainThread]: Command `dbt debug` succeeded at 11:43:43.969363 after 0.29 seconds
+[0m11:43:43.969719 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m11:43:43.969906 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff89dba090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff88a64a90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8ad20290>]}
+[0m11:43:43.970346 [debug] [MainThread]: Flushing usage events
+[0m11:43:44.503650 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:43:56.606027 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffadb6bd10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffadbcfb50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffadbcd7d0>]}
+
+
+============================== 11:43:56.608119 | 516f9e11-c968-4295-b320-16ed73d8181e ==============================
+[0m11:43:56.608119 [info ] [MainThread]: Running with dbt=1.10.15
+[0m11:43:56.608509 [debug] [MainThread]: running dbt with arguments {'debug': 'False', 'use_experimental_parser': 'False', 'partial_parse': 'True', 'no_print': 'None', 'write_json': 'True', 'empty': 'False', 'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'introspect': 'True', 'warn_error': 'None', 'quiet': 'False', 'profiles_dir': '/root/.dbt', 'invocation_command': 'dbt run', 'log_format': 'default', 'cache_selected_only': 'False', 'target_path': 'None', 'fail_fast': 'False', 'log_path': '/app/logs', 'printer_width': '80', 'log_cache_events': 'False', 'use_colors': 'True', 'version_check': 'True', 'indirect_selection': 'eager'}
+[0m11:43:56.685953 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '516f9e11-c968-4295-b320-16ed73d8181e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffacc59f90>]}
+[0m11:43:56.714541 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '516f9e11-c968-4295-b320-16ed73d8181e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffacb1dc50>]}
+[0m11:43:56.715054 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m11:43:56.740444 [error] [MainThread]: Encountered an error:
+Compilation Error
+  dbt found 1 package(s) specified in packages.yml, but only 0 package(s) installed in dbt_packages. Run "dbt deps" to install package dependencies.
+[0m11:43:56.741229 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.16430263, "process_in_blocks": "0", "process_kernel_time": 0.188283, "process_mem_max_rss": "109616", "process_out_blocks": "4", "process_user_time": 0.754146}
+[0m11:43:56.741564 [debug] [MainThread]: Command `dbt run` failed at 11:43:56.741501 after 0.16 seconds
+[0m11:43:56.741840 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffadbdb550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffadbd9450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffacb16950>]}
+[0m11:43:56.742087 [debug] [MainThread]: Flushing usage events
+[0m11:43:57.280362 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:44:25.654174 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff86e493d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff86dddfd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff86dddc50>]}
+
+
+============================== 11:44:25.656189 | d40b7c01-516c-4014-b96b-6210f44d5dda ==============================
+[0m11:44:25.656189 [info ] [MainThread]: Running with dbt=1.10.15
+[0m11:44:25.656578 [debug] [MainThread]: running dbt with arguments {'cache_selected_only': 'False', 'indirect_selection': 'eager', 'invocation_command': 'dbt deps', 'log_format': 'default', 'empty': 'None', 'write_json': 'True', 'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True', 'printer_width': '80', 'use_colors': 'True', 'profiles_dir': '/root/.dbt', 'partial_parse': 'True', 'target_path': 'None', 'log_path': '/app/logs', 'warn_error': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'fail_fast': 'False', 'debug': 'False', 'introspect': 'True', 'use_experimental_parser': 'False', 'version_check': 'True', 'quiet': 'False', 'no_print': 'None'}
+[0m11:44:25.709767 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd40b7c01-516c-4014-b96b-6210f44d5dda', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff86d5be10>]}
+[0m11:44:25.726778 [debug] [MainThread]: Set downloads directory='/tmp/dbt-downloads-xa2rdc2c'
+[0m11:44:25.727136 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m11:44:25.843513 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m11:44:25.844773 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m11:44:25.946051 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m11:44:25.959868 [info ] [MainThread]: Updating lock file in file path: /app/package-lock.yml
+[0m11:44:25.962729 [debug] [MainThread]: Set downloads directory='/tmp/dbt-downloads-2n5rmd5u'
+[0m11:44:25.965477 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m11:44:26.512721 [info ] [MainThread]: Installed from version 1.3.2
+[0m11:44:26.513116 [info ] [MainThread]: Up to date!
+[0m11:44:26.513465 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'd40b7c01-516c-4014-b96b-6210f44d5dda', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff86e54190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff86d34a10>]}
+[0m11:44:26.514424 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": true, "command_wall_clock_time": 0.88503116, "process_in_blocks": "0", "process_kernel_time": 0.248564, "process_mem_max_rss": "106116", "process_out_blocks": "948", "process_user_time": 0.791797}
+[0m11:44:26.514779 [debug] [MainThread]: Command `dbt deps` succeeded at 11:44:26.514715 after 0.89 seconds
+[0m11:44:26.515026 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff86c59550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8bd277d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8bc76a90>]}
+[0m11:44:26.515217 [debug] [MainThread]: Flushing usage events
+[0m11:44:27.042518 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:44:45.084285 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb64b9550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb6856150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb651d390>]}
+
+
+============================== 11:44:45.086232 | a9875b9c-ab8f-4b30-af12-41baf71d32ea ==============================
+[0m11:44:45.086232 [info ] [MainThread]: Running with dbt=1.10.15
+[0m11:44:45.086615 [debug] [MainThread]: running dbt with arguments {'log_cache_events': 'False', 'indirect_selection': 'eager', 'no_print': 'None', 'empty': 'False', 'cache_selected_only': 'False', 'warn_error': 'None', 'log_path': '/app/logs', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'partial_parse': 'True', 'invocation_command': 'dbt run', 'write_json': 'True', 'debug': 'False', 'fail_fast': 'False', 'send_anonymous_usage_stats': 'True', 'use_experimental_parser': 'False', 'use_colors': 'True', 'version_check': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'profiles_dir': '/root/.dbt', 'printer_width': '80', 'introspect': 'True', 'quiet': 'False'}
+[0m11:44:45.167026 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a9875b9c-ab8f-4b30-af12-41baf71d32ea', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb63df410>]}
+[0m11:44:45.194214 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a9875b9c-ab8f-4b30-af12-41baf71d32ea', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb9289f50>]}
+[0m11:44:45.194679 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m11:44:45.233732 [debug] [MainThread]: checksum: 14a228079bd6df63ba81633f9a3cf44ecfaa31056ac397c602753ec895dbf885, vars: {}, profile: , target: , version: 1.10.15
+[0m11:44:45.258601 [info ] [MainThread]: Unable to do partial parsing because of a version mismatch
+[0m11:44:45.259015 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'a9875b9c-ab8f-4b30-af12-41baf71d32ea', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb7491790>]}
+[0m11:44:45.862345 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test `accepted_values`. Arguments to generic tests
+should be nested under the `arguments` property.`
+[0m11:44:45.862826 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'a9875b9c-ab8f-4b30-af12-41baf71d32ea', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb826e750>]}
+[0m11:44:46.127891 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'company__performance_metrics' in the 'models' section of file 'models/report/companies_kpis.yml'
+[0m11:44:46.169373 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.interview_project.not_null_company__performance_metrics_company_id.7259fffceb' (models/report/companies_kpis.yml) depends on a node named 'company__performance_metrics' in package '' which was not found
+[0m11:44:46.169824 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.interview_project.unique_company__performance_metrics_company_id.5ec7455e78' (models/report/companies_kpis.yml) depends on a node named 'company__performance_metrics' in package '' which was not found
+[0m11:44:46.170264 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.interview_project.dbt_utils_expression_is_true_company__performance_metrics_total_events___0.83713c45c3' (models/report/companies_kpis.yml) depends on a node named 'company__performance_metrics' in package '' which was not found
+[0m11:44:46.170594 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.interview_project.dbt_utils_expression_is_true_company__performance_metrics_total_pageviews___0.bd02440740' (models/report/companies_kpis.yml) depends on a node named 'company__performance_metrics' in package '' which was not found
+[0m11:44:46.171057 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.interview_project.dbt_utils_expression_is_true_company__performance_metrics_total_consent_given___0.1260e36d9f' (models/report/companies_kpis.yml) depends on a node named 'company__performance_metrics' in package '' which was not found
+[0m11:44:46.171333 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.interview_project.dbt_utils_expression_is_true_company__performance_metrics_total_consent_asked___0.347c2036fb' (models/report/companies_kpis.yml) depends on a node named 'company__performance_metrics' in package '' which was not found
+[0m11:44:46.171617 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.interview_project.dbt_utils_expression_is_true_company__performance_metrics_total_ui_actions___0.c0ef83e3cf' (models/report/companies_kpis.yml) depends on a node named 'company__performance_metrics' in package '' which was not found
+[0m11:44:46.171910 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.interview_project.dbt_utils_expression_is_true_company__performance_metrics_distinct_countries___0.95d8b75e5b' (models/report/companies_kpis.yml) depends on a node named 'company__performance_metrics' in package '' which was not found
+[0m11:44:46.172245 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.interview_project.dbt_utils_expression_is_true_company__performance_metrics_given_extrapolated_count___0.7dcf263397' (models/report/companies_kpis.yml) depends on a node named 'company__performance_metrics' in package '' which was not found
+[0m11:44:46.172522 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.interview_project.dbt_utils_expression_is_true_company__performance_metrics_asked_extrapolated_count___0.cff34e1645' (models/report/companies_kpis.yml) depends on a node named 'company__performance_metrics' in package '' which was not found
+[0m11:44:46.172868 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.interview_project.dbt_utils_expression_is_true_company__performance_metrics_consent_conversion_rate_pct__consent_conversion_rate_pct_IS_NULL_OR_consent_conversion_rate_pct_BETWEEN_0_AND_1_.336aedd7ee' (models/report/companies_kpis.yml) depends on a node named 'company__performance_metrics' in package '' which was not found
+[0m11:44:46.173157 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.interview_project.dbt_utils_expression_is_true_company__performance_metrics_total_empty_consent_statuses___0.a8932ba6e1' (models/report/companies_kpis.yml) depends on a node named 'company__performance_metrics' in package '' which was not found
+[0m11:44:46.173490 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.interview_project.dbt_utils_expression_is_true_company__performance_metrics_total_full_opt_in_consent_statuses___0.b15e3df1ff' (models/report/companies_kpis.yml) depends on a node named 'company__performance_metrics' in package '' which was not found
+[0m11:44:46.173819 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.interview_project.dbt_utils_expression_is_true_company__performance_metrics_total_partial_opt_in_consent_statuses___0.ea8b96a0d7' (models/report/companies_kpis.yml) depends on a node named 'company__performance_metrics' in package '' which was not found
+[0m11:44:46.174076 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.interview_project.dbt_utils_expression_is_true_company__performance_metrics_median_seconds_to_consented__median_seconds_to_consented_IS_NULL_OR_median_seconds_to_consented_0.92c8493b00' (models/report/companies_kpis.yml) depends on a node named 'company__performance_metrics' in package '' which was not found
+[0m11:44:46.230682 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a9875b9c-ab8f-4b30-af12-41baf71d32ea', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffafe59810>]}
+[0m11:44:46.318301 [debug] [MainThread]: Wrote artifact WritableManifest to /app/target/manifest.json
+[0m11:44:46.319671 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/target/semantic_manifest.json
+[0m11:44:46.340534 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a9875b9c-ab8f-4b30-af12-41baf71d32ea', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffafebf610>]}
+[0m11:44:46.340888 [info ] [MainThread]: Found 10 models, 65 data tests, 2 sources, 564 macros
+[0m11:44:46.341138 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a9875b9c-ab8f-4b30-af12-41baf71d32ea', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb8eb2b10>]}
+[0m11:44:46.342656 [info ] [MainThread]: 
+[0m11:44:46.342973 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m11:44:46.343213 [info ] [MainThread]: 
+[0m11:44:46.343522 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m11:44:46.346140 [debug] [ThreadPool]: Acquiring new postgres connection 'list_analytics_db'
+[0m11:44:46.366054 [debug] [ThreadPool]: Using postgres connection "list_analytics_db"
+[0m11:44:46.366298 [debug] [ThreadPool]: On list_analytics_db: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "interview_project", "target_name": "dev", "connection_name": "list_analytics_db"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m11:44:46.366488 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:44:46.387939 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.021 seconds
+[0m11:44:46.388586 [debug] [ThreadPool]: On list_analytics_db: Close
+[0m11:44:46.389612 [debug] [ThreadPool]: Acquiring new postgres connection 'list_analytics_db_main'
+[0m11:44:46.392918 [debug] [ThreadPool]: Using postgres connection "list_analytics_db_main"
+[0m11:44:46.393100 [debug] [ThreadPool]: On list_analytics_db_main: BEGIN
+[0m11:44:46.393236 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:44:46.397121 [debug] [ThreadPool]: SQL status: BEGIN in 0.004 seconds
+[0m11:44:46.397322 [debug] [ThreadPool]: Using postgres connection "list_analytics_db_main"
+[0m11:44:46.397517 [debug] [ThreadPool]: On list_analytics_db_main: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "interview_project", "target_name": "dev", "connection_name": "list_analytics_db_main"} */
+select
+      'analytics_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'main'
+    union all
+    select
+      'analytics_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'main'
+    union all
+    select
+      'analytics_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'main'
+  
+[0m11:44:46.404099 [debug] [ThreadPool]: SQL status: SELECT 12 in 0.006 seconds
+[0m11:44:46.404777 [debug] [ThreadPool]: On list_analytics_db_main: ROLLBACK
+[0m11:44:46.404980 [debug] [ThreadPool]: On list_analytics_db_main: Close
+[0m11:44:46.408135 [debug] [MainThread]: Using postgres connection "master"
+[0m11:44:46.408347 [debug] [MainThread]: On master: BEGIN
+[0m11:44:46.408506 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m11:44:46.412051 [debug] [MainThread]: SQL status: BEGIN in 0.004 seconds
+[0m11:44:46.412229 [debug] [MainThread]: Using postgres connection "master"
+[0m11:44:46.412447 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "interview_project", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m11:44:46.433683 [debug] [MainThread]: SQL status: SELECT 0 in 0.021 seconds
+[0m11:44:46.434319 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a9875b9c-ab8f-4b30-af12-41baf71d32ea', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb5036d50>]}
+[0m11:44:46.434556 [debug] [MainThread]: On master: ROLLBACK
+[0m11:44:46.434749 [debug] [MainThread]: Using postgres connection "master"
+[0m11:44:46.434880 [debug] [MainThread]: On master: BEGIN
+[0m11:44:46.435106 [debug] [MainThread]: SQL status: BEGIN in 0.000 seconds
+[0m11:44:46.435284 [debug] [MainThread]: On master: COMMIT
+[0m11:44:46.435452 [debug] [MainThread]: Using postgres connection "master"
+[0m11:44:46.435583 [debug] [MainThread]: On master: COMMIT
+[0m11:44:46.435808 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m11:44:46.435960 [debug] [MainThread]: On master: Close
+[0m11:44:46.440924 [debug] [Thread-1 (]: Began running node model.interview_project.stg_company_info
+[0m11:44:46.441111 [debug] [Thread-2 (]: Began running node model.interview_project.stg_events
+[0m11:44:46.441381 [info ] [Thread-1 (]: 1 of 10 START sql table model main.stg_company_info ............................ [RUN]
+[0m11:44:46.441945 [info ] [Thread-2 (]: 2 of 10 START sql table model main.stg_events .................................. [RUN]
+[0m11:44:46.442240 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_analytics_db_main, now model.interview_project.stg_company_info)
+[0m11:44:46.442499 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_analytics_db, now model.interview_project.stg_events)
+[0m11:44:46.442701 [debug] [Thread-1 (]: Began compiling node model.interview_project.stg_company_info
+[0m11:44:46.443303 [debug] [Thread-2 (]: Began compiling node model.interview_project.stg_events
+[0m11:44:46.447247 [debug] [Thread-1 (]: Writing injected SQL for node "model.interview_project.stg_company_info"
+[0m11:44:46.448848 [debug] [Thread-2 (]: Writing injected SQL for node "model.interview_project.stg_events"
+[0m11:44:46.450182 [debug] [Thread-1 (]: Began executing node model.interview_project.stg_company_info
+[0m11:44:46.468531 [debug] [Thread-1 (]: Writing runtime sql for node "model.interview_project.stg_company_info"
+[0m11:44:46.468766 [debug] [Thread-2 (]: Began executing node model.interview_project.stg_events
+[0m11:44:46.470832 [debug] [Thread-2 (]: Writing runtime sql for node "model.interview_project.stg_events"
+[0m11:44:46.471929 [debug] [Thread-1 (]: Using postgres connection "model.interview_project.stg_company_info"
+[0m11:44:46.472138 [debug] [Thread-1 (]: On model.interview_project.stg_company_info: BEGIN
+[0m11:44:46.472295 [debug] [Thread-2 (]: Using postgres connection "model.interview_project.stg_events"
+[0m11:44:46.472592 [debug] [Thread-2 (]: On model.interview_project.stg_events: BEGIN
+[0m11:44:46.472735 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m11:44:46.472441 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:44:46.477961 [debug] [Thread-2 (]: SQL status: BEGIN in 0.005 seconds
+[0m11:44:46.478760 [debug] [Thread-2 (]: Using postgres connection "model.interview_project.stg_events"
+[0m11:44:46.479088 [debug] [Thread-2 (]: On model.interview_project.stg_events: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "interview_project", "target_name": "dev", "node_id": "model.interview_project.stg_events"} */
+
+  
+    
+
+  create  table "analytics_db"."main"."stg_events__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+WITH src AS (SELECT * FROM "analytics_db"."main"."events"),
+
+deduped AS (
+    SELECT 
+        *,
+        ROW_NUMBER() OVER (
+            PARTITION BY event_id 
+            ORDER BY event_time ASC
+        ) AS rn
+    FROM src
+),
+
+typed AS (
+    SELECT
+        event_id,
+        user_id,
+        type AS event_type,
+        COALESCE(CAST(rate AS FLOAT), 1.0) AS rate,
+        parameters,
+        CAST(event_time AS TIMESTAMP) AS event_time,
+        CAST(window_start AS TIMESTAMP) AS window_start,
+        apikey AS company_id,
+        COALESCE(consent,'empty') AS consent_status,
+        count AS sampled_count,
+        CASE
+            WHEN CAST(rate AS FLOAT) > 0
+                 THEN CAST(count AS FLOAT) / CAST(rate AS FLOAT)
+            ELSE NULL
+        END AS extrapolated_count,
+        experiment,
+        sdk_type,
+        domain,
+        deployment_id,
+        REGEXP_REPLACE(country, '"""', '', 'g') AS country,
+        REGEXP_REPLACE(region, '"""', '', 'g') AS region,
+        browser_family,
+        device_type
+    FROM deduped
+    WHERE event_id IS NOT NULL
+    AND rn = 1
+)
+
+SELECT 
+    *,
+    ROUND(extrapolated_count) AS extrapolated_count_rounded
+FROM typed
+  );
+  
+[0m11:44:46.481282 [debug] [Thread-1 (]: SQL status: BEGIN in 0.009 seconds
+[0m11:44:46.481485 [debug] [Thread-1 (]: Using postgres connection "model.interview_project.stg_company_info"
+[0m11:44:46.481689 [debug] [Thread-1 (]: On model.interview_project.stg_company_info: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "interview_project", "target_name": "dev", "node_id": "model.interview_project.stg_company_info"} */
+
+  
+    
+
+  create  table "analytics_db"."main"."stg_company_info__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+WITH src AS (
+    SELECT * FROM "analytics_db"."main"."company_info"
+),
+
+typed AS (
+    SELECT
+        TRIM(public_api_key) AS company_id,
+        TRIM(industry_back) AS industry_back,
+        TRIM(industry_front) AS industry_front,
+        NULLIF(TRIM(hq_country), '') AS hq_country
+    FROM src
+    WHERE public_api_key IS NOT NULL
+)
+
+SELECT * FROM typed
+  );
+  
+[0m11:44:46.495990 [debug] [Thread-1 (]: SQL status: SELECT 40 in 0.014 seconds
+[0m11:44:46.503022 [debug] [Thread-1 (]: Using postgres connection "model.interview_project.stg_company_info"
+[0m11:44:46.503296 [debug] [Thread-1 (]: On model.interview_project.stg_company_info: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "interview_project", "target_name": "dev", "node_id": "model.interview_project.stg_company_info"} */
+alter table "analytics_db"."main"."stg_company_info" rename to "stg_company_info__dbt_backup"
+[0m11:44:46.504341 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m11:44:46.506035 [debug] [Thread-1 (]: Using postgres connection "model.interview_project.stg_company_info"
+[0m11:44:46.506239 [debug] [Thread-1 (]: On model.interview_project.stg_company_info: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "interview_project", "target_name": "dev", "node_id": "model.interview_project.stg_company_info"} */
+alter table "analytics_db"."main"."stg_company_info__dbt_tmp" rename to "stg_company_info"
+[0m11:44:46.506687 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m11:44:46.515904 [debug] [Thread-1 (]: On model.interview_project.stg_company_info: COMMIT
+[0m11:44:46.516271 [debug] [Thread-1 (]: Using postgres connection "model.interview_project.stg_company_info"
+[0m11:44:46.516533 [debug] [Thread-1 (]: On model.interview_project.stg_company_info: COMMIT
+[0m11:44:46.518937 [debug] [Thread-1 (]: SQL status: COMMIT in 0.002 seconds
+[0m11:44:46.522566 [debug] [Thread-1 (]: Applying DROP to: "analytics_db"."main"."stg_company_info__dbt_backup"
+[0m11:44:46.525266 [debug] [Thread-1 (]: Using postgres connection "model.interview_project.stg_company_info"
+[0m11:44:46.525731 [debug] [Thread-1 (]: On model.interview_project.stg_company_info: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "interview_project", "target_name": "dev", "node_id": "model.interview_project.stg_company_info"} */
+drop table if exists "analytics_db"."main"."stg_company_info__dbt_backup" cascade
+[0m11:44:46.529934 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.004 seconds
+[0m11:44:46.531436 [debug] [Thread-1 (]: On model.interview_project.stg_company_info: Close
+[0m11:44:46.532667 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a9875b9c-ab8f-4b30-af12-41baf71d32ea', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb55ef210>]}
+[0m11:44:46.533060 [info ] [Thread-1 (]: 1 of 10 OK created sql table model main.stg_company_info ....................... [[32mSELECT 40[0m in 0.09s]
+[0m11:44:46.533616 [debug] [Thread-1 (]: Finished running node model.interview_project.stg_company_info
+[0m11:44:46.534121 [debug] [Thread-4 (]: Began running node model.interview_project.int_company__dim
+[0m11:44:46.534393 [info ] [Thread-4 (]: 3 of 10 START sql table model main.int_company__dim ............................ [RUN]
+[0m11:44:46.534792 [debug] [Thread-4 (]: Acquiring new postgres connection 'model.interview_project.int_company__dim'
+[0m11:44:46.535029 [debug] [Thread-4 (]: Began compiling node model.interview_project.int_company__dim
+[0m11:44:46.537075 [debug] [Thread-4 (]: Writing injected SQL for node "model.interview_project.int_company__dim"
+[0m11:44:46.538049 [debug] [Thread-4 (]: Began executing node model.interview_project.int_company__dim
+[0m11:44:46.540906 [debug] [Thread-4 (]: Writing runtime sql for node "model.interview_project.int_company__dim"
+[0m11:44:46.542521 [debug] [Thread-4 (]: Using postgres connection "model.interview_project.int_company__dim"
+[0m11:44:46.542993 [debug] [Thread-4 (]: On model.interview_project.int_company__dim: BEGIN
+[0m11:44:46.543444 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m11:44:46.552529 [debug] [Thread-4 (]: SQL status: BEGIN in 0.009 seconds
+[0m11:44:46.552848 [debug] [Thread-4 (]: Using postgres connection "model.interview_project.int_company__dim"
+[0m11:44:46.553056 [debug] [Thread-4 (]: On model.interview_project.int_company__dim: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "interview_project", "target_name": "dev", "node_id": "model.interview_project.int_company__dim"} */
+
+  
+    
+
+  create  table "analytics_db"."main"."int_company__dim__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+WITH company_info AS (SELECT * FROM "analytics_db"."main"."stg_company_info")
+
+SELECT
+    company_id,
+    industry_back,
+    industry_front,
+    hq_country
+FROM company_info ci
+WHERE company_id IS NOT NULL
+  );
+  
+[0m11:44:46.560352 [debug] [Thread-4 (]: SQL status: SELECT 40 in 0.007 seconds
+[0m11:44:46.562499 [debug] [Thread-4 (]: Using postgres connection "model.interview_project.int_company__dim"
+[0m11:44:46.562725 [debug] [Thread-4 (]: On model.interview_project.int_company__dim: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "interview_project", "target_name": "dev", "node_id": "model.interview_project.int_company__dim"} */
+alter table "analytics_db"."main"."int_company__dim" rename to "int_company__dim__dbt_backup"
+[0m11:44:46.563106 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m11:44:46.564705 [debug] [Thread-4 (]: Using postgres connection "model.interview_project.int_company__dim"
+[0m11:44:46.564905 [debug] [Thread-4 (]: On model.interview_project.int_company__dim: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "interview_project", "target_name": "dev", "node_id": "model.interview_project.int_company__dim"} */
+alter table "analytics_db"."main"."int_company__dim__dbt_tmp" rename to "int_company__dim"
+[0m11:44:46.565214 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m11:44:46.565878 [debug] [Thread-4 (]: On model.interview_project.int_company__dim: COMMIT
+[0m11:44:46.566070 [debug] [Thread-4 (]: Using postgres connection "model.interview_project.int_company__dim"
+[0m11:44:46.566268 [debug] [Thread-4 (]: On model.interview_project.int_company__dim: COMMIT
+[0m11:44:46.568484 [debug] [Thread-4 (]: SQL status: COMMIT in 0.002 seconds
+[0m11:44:46.569909 [debug] [Thread-4 (]: Applying DROP to: "analytics_db"."main"."int_company__dim__dbt_backup"
+[0m11:44:46.570204 [debug] [Thread-4 (]: Using postgres connection "model.interview_project.int_company__dim"
+[0m11:44:46.570379 [debug] [Thread-4 (]: On model.interview_project.int_company__dim: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "interview_project", "target_name": "dev", "node_id": "model.interview_project.int_company__dim"} */
+drop table if exists "analytics_db"."main"."int_company__dim__dbt_backup" cascade
+[0m11:44:46.571372 [debug] [Thread-4 (]: SQL status: DROP TABLE in 0.001 seconds
+[0m11:44:46.572378 [debug] [Thread-4 (]: On model.interview_project.int_company__dim: Close
+[0m11:44:46.573305 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a9875b9c-ab8f-4b30-af12-41baf71d32ea', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb90d24d0>]}
+[0m11:44:46.573987 [info ] [Thread-4 (]: 3 of 10 OK created sql table model main.int_company__dim ....................... [[32mSELECT 40[0m in 0.04s]
+[0m11:44:46.574673 [debug] [Thread-4 (]: Finished running node model.interview_project.int_company__dim
+[0m11:44:46.933709 [debug] [Thread-2 (]: SQL status: SELECT 6508 in 0.454 seconds
+[0m11:44:46.937719 [debug] [Thread-2 (]: Using postgres connection "model.interview_project.stg_events"
+[0m11:44:46.938042 [debug] [Thread-2 (]: On model.interview_project.stg_events: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "interview_project", "target_name": "dev", "node_id": "model.interview_project.stg_events"} */
+alter table "analytics_db"."main"."stg_events" rename to "stg_events__dbt_backup"
+[0m11:44:46.938867 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m11:44:46.940530 [debug] [Thread-2 (]: Using postgres connection "model.interview_project.stg_events"
+[0m11:44:46.940814 [debug] [Thread-2 (]: On model.interview_project.stg_events: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "interview_project", "target_name": "dev", "node_id": "model.interview_project.stg_events"} */
+alter table "analytics_db"."main"."stg_events__dbt_tmp" rename to "stg_events"
+[0m11:44:46.941171 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m11:44:46.941855 [debug] [Thread-2 (]: On model.interview_project.stg_events: COMMIT
+[0m11:44:46.942048 [debug] [Thread-2 (]: Using postgres connection "model.interview_project.stg_events"
+[0m11:44:46.942204 [debug] [Thread-2 (]: On model.interview_project.stg_events: COMMIT
+[0m11:44:46.966936 [debug] [Thread-2 (]: SQL status: COMMIT in 0.025 seconds
+[0m11:44:46.968367 [debug] [Thread-2 (]: Applying DROP to: "analytics_db"."main"."stg_events__dbt_backup"
+[0m11:44:46.968687 [debug] [Thread-2 (]: Using postgres connection "model.interview_project.stg_events"
+[0m11:44:46.968870 [debug] [Thread-2 (]: On model.interview_project.stg_events: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "interview_project", "target_name": "dev", "node_id": "model.interview_project.stg_events"} */
+drop table if exists "analytics_db"."main"."stg_events__dbt_backup" cascade
+[0m11:44:46.986797 [debug] [Thread-2 (]: SQL status: DROP TABLE in 0.018 seconds
+[0m11:44:46.987793 [debug] [Thread-2 (]: On model.interview_project.stg_events: Close
+[0m11:44:46.988306 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a9875b9c-ab8f-4b30-af12-41baf71d32ea', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaf26dad0>]}
+[0m11:44:46.988771 [info ] [Thread-2 (]: 2 of 10 OK created sql table model main.stg_events ............................. [[32mSELECT 6508[0m in 0.55s]
+[0m11:44:46.989219 [debug] [Thread-2 (]: Finished running node model.interview_project.stg_events
+[0m11:44:46.990076 [debug] [Thread-1 (]: Began running node model.interview_project.int_company__performance
+[0m11:44:46.990260 [debug] [Thread-3 (]: Began running node model.interview_project.int_consent__conversion_rate
+[0m11:44:46.990488 [debug] [Thread-4 (]: Began running node model.interview_project.int_consent__status_distribution
+[0m11:44:46.993216 [info ] [Thread-4 (]: 6 of 10 START sql table model main.int_consent__status_distribution ............ [RUN]
+[0m11:44:46.990949 [info ] [Thread-1 (]: 4 of 10 START sql table model main.int_company__performance .................... [RUN]
+[0m11:44:46.992607 [info ] [Thread-3 (]: 5 of 10 START sql table model main.int_consent__conversion_rate ................ [RUN]
+[0m11:44:46.990676 [debug] [Thread-2 (]: Began running node model.interview_project.int_consent__time
+[0m11:44:46.998211 [info ] [Thread-2 (]: 7 of 10 START sql table model main.int_consent__time ........................... [RUN]
+[0m11:44:46.997014 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.interview_project.stg_company_info, now model.interview_project.int_company__performance)
+[0m11:44:46.997339 [debug] [Thread-3 (]: Acquiring new postgres connection 'model.interview_project.int_consent__conversion_rate'
+[0m11:44:46.994055 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.interview_project.int_company__dim, now model.interview_project.int_consent__status_distribution)
+[0m11:44:47.005564 [debug] [Thread-4 (]: Began compiling node model.interview_project.int_consent__status_distribution
+[0m11:44:46.999685 [debug] [Thread-1 (]: Began compiling node model.interview_project.int_company__performance
+[0m11:44:47.002929 [debug] [Thread-3 (]: Began compiling node model.interview_project.int_consent__conversion_rate
+[0m11:44:46.998561 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.interview_project.stg_events, now model.interview_project.int_consent__time)
+[0m11:44:47.012135 [debug] [Thread-2 (]: Began compiling node model.interview_project.int_consent__time
+[0m11:44:47.010220 [debug] [Thread-1 (]: Writing injected SQL for node "model.interview_project.int_company__performance"
+[0m11:44:47.011865 [debug] [Thread-3 (]: Writing injected SQL for node "model.interview_project.int_consent__conversion_rate"
+[0m11:44:47.008440 [debug] [Thread-4 (]: Writing injected SQL for node "model.interview_project.int_consent__status_distribution"
+[0m11:44:47.013760 [debug] [Thread-2 (]: Writing injected SQL for node "model.interview_project.int_consent__time"
+[0m11:44:47.014933 [debug] [Thread-1 (]: Began executing node model.interview_project.int_company__performance
+[0m11:44:47.015217 [debug] [Thread-3 (]: Began executing node model.interview_project.int_consent__conversion_rate
+[0m11:44:47.017073 [debug] [Thread-1 (]: Writing runtime sql for node "model.interview_project.int_company__performance"
+[0m11:44:47.017349 [debug] [Thread-2 (]: Began executing node model.interview_project.int_consent__time
+[0m11:44:47.019027 [debug] [Thread-3 (]: Writing runtime sql for node "model.interview_project.int_consent__conversion_rate"
+[0m11:44:47.019187 [debug] [Thread-4 (]: Began executing node model.interview_project.int_consent__status_distribution
+[0m11:44:47.022124 [debug] [Thread-2 (]: Writing runtime sql for node "model.interview_project.int_consent__time"
+[0m11:44:47.022589 [debug] [Thread-1 (]: Using postgres connection "model.interview_project.int_company__performance"
+[0m11:44:47.024506 [debug] [Thread-4 (]: Writing runtime sql for node "model.interview_project.int_consent__status_distribution"
+[0m11:44:47.025008 [debug] [Thread-3 (]: Using postgres connection "model.interview_project.int_consent__conversion_rate"
+[0m11:44:47.025163 [debug] [Thread-1 (]: On model.interview_project.int_company__performance: BEGIN
+[0m11:44:47.025494 [debug] [Thread-2 (]: Using postgres connection "model.interview_project.int_consent__time"
+[0m11:44:47.025692 [debug] [Thread-3 (]: On model.interview_project.int_consent__conversion_rate: BEGIN
+[0m11:44:47.027114 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m11:44:47.026492 [debug] [Thread-4 (]: Using postgres connection "model.interview_project.int_consent__status_distribution"
+[0m11:44:47.026666 [debug] [Thread-2 (]: On model.interview_project.int_consent__time: BEGIN
+[0m11:44:47.026030 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:44:47.027706 [debug] [Thread-4 (]: On model.interview_project.int_consent__status_distribution: BEGIN
+[0m11:44:47.028069 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m11:44:47.028490 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m11:44:47.033497 [debug] [Thread-1 (]: SQL status: BEGIN in 0.007 seconds
+[0m11:44:47.035209 [debug] [Thread-3 (]: SQL status: BEGIN in 0.008 seconds
+[0m11:44:47.035398 [debug] [Thread-1 (]: Using postgres connection "model.interview_project.int_company__performance"
+[0m11:44:47.035662 [debug] [Thread-4 (]: SQL status: BEGIN in 0.007 seconds
+[0m11:44:47.036459 [debug] [Thread-4 (]: Using postgres connection "model.interview_project.int_consent__status_distribution"
+[0m11:44:47.036094 [debug] [Thread-1 (]: On model.interview_project.int_company__performance: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "interview_project", "target_name": "dev", "node_id": "model.interview_project.int_company__performance"} */
+
+  
+    
+
+  create  table "analytics_db"."main"."int_company__performance__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+WITH events AS (SELECT * FROM "analytics_db"."main"."stg_events"),
+
+ events_light AS (
+    SELECT
+        company_id,
+        event_type,
+        country,
+        extrapolated_count_rounded
+    FROM events
+),
+
+summaries AS (
+    SELECT
+        company_id,
+        SUM(extrapolated_count_rounded) AS total_events,
+        SUM(extrapolated_count_rounded) FILTER (WHERE event_type = 'pageview') AS total_pageviews,
+        SUM(extrapolated_count_rounded) FILTER (WHERE event_type = 'consent.given') AS total_consent_given,
+        SUM(extrapolated_count_rounded) FILTER (WHERE event_type = 'consent.asked') AS total_consent_asked,
+        SUM(extrapolated_count_rounded) FILTER (WHERE event_type = 'ui.action') AS total_ui_actions,
+        COUNT(DISTINCT country) AS distinct_countries
+    FROM events_light
+    GROUP BY company_id
+)
+
+SELECT * FROM summaries
+  );
+  
+[0m11:44:47.035791 [debug] [Thread-3 (]: Using postgres connection "model.interview_project.int_consent__conversion_rate"
+[0m11:44:47.037233 [debug] [Thread-3 (]: On model.interview_project.int_consent__conversion_rate: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "interview_project", "target_name": "dev", "node_id": "model.interview_project.int_consent__conversion_rate"} */
+
+  
+    
+
+  create  table "analytics_db"."main"."int_consent__conversion_rate__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+WITH events AS (SELECT * FROM "analytics_db"."main"."stg_events"),
+
+asked AS (
+    SELECT
+        company_id,
+        SUM(extrapolated_count_rounded) AS asked_extrapolated_count
+    FROM events
+    WHERE event_type = 'consent.asked'
+    GROUP BY 1
+),
+
+given AS (
+
+    SELECT
+        company_id,
+        SUM(extrapolated_count_rounded) AS given_extrapolated_count
+    FROM events
+    WHERE event_type = 'consent.given'
+    GROUP BY 1
+),
+
+joined AS (
+    SELECT
+        a.company_id,
+        given_extrapolated_count,
+        asked_extrapolated_count,
+        given_extrapolated_count / NULLIF(asked_extrapolated_count, 0) AS consent_conversion_rate_pct
+    FROM asked a
+    LEFT JOIN given g USING (company_id)
+)
+
+SELECT * FROM joined
+  );
+  
+[0m11:44:47.036811 [debug] [Thread-4 (]: On model.interview_project.int_consent__status_distribution: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "interview_project", "target_name": "dev", "node_id": "model.interview_project.int_consent__status_distribution"} */
+
+  
+    
+
+  create  table "analytics_db"."main"."int_consent__status_distribution__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+WITH events AS (SELECT * FROM "analytics_db"."main"."stg_events"),
+
+ events_light AS (
+    SELECT
+        company_id,
+        consent_status,
+        extrapolated_count_rounded
+    FROM events
+),
+
+summaries AS (
+    SELECT
+        company_id,
+        SUM(extrapolated_count_rounded) AS total_events,
+        SUM(
+            CASE 
+                WHEN consent_status = 'empty'
+                THEN extrapolated_count_rounded
+                ELSE 0
+            END
+            ) AS total_empty_consent_statuses,
+
+        SUM(
+            CASE 
+                WHEN consent_status = 'full opt-in'
+                THEN extrapolated_count_rounded
+                ELSE 0
+            END
+            ) AS total_full_opt_in_consent_statuses,
+        SUM(
+            CASE 
+                WHEN consent_status = 'partial'
+                THEN extrapolated_count_rounded
+                ELSE 0
+            END
+            ) AS total_partial_opt_in_consent_statuses
+    FROM events_light
+    GROUP BY company_id
+)
+
+SELECT * FROM summaries
+  );
+  
+[0m11:44:47.038107 [debug] [Thread-2 (]: SQL status: BEGIN in 0.010 seconds
+[0m11:44:47.038618 [debug] [Thread-2 (]: Using postgres connection "model.interview_project.int_consent__time"
+[0m11:44:47.039120 [debug] [Thread-2 (]: On model.interview_project.int_consent__time: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "interview_project", "target_name": "dev", "node_id": "model.interview_project.int_consent__time"} */
+
+  
+    
+
+  create  table "analytics_db"."main"."int_consent__time__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+WITH events AS (SELECT * FROM "analytics_db"."main"."stg_events"),
+
+asked AS (
+    SELECT
+        company_id,
+        event_time AS asked_at,
+        window_start,
+        ROW_NUMBER() OVER (PARTITION BY company_id,window_start ORDER BY event_time ASC) AS rank_asked
+    FROM events
+),
+
+given AS (
+
+    SELECT
+        company_id,
+        event_time AS given_at,
+        window_start,
+        ROW_NUMBER() OVER (PARTITION BY company_id,window_start ORDER BY event_time ASC) AS rank_given
+    FROM events
+    WHERE event_type = 'consent.given'
+),
+
+asked_dedup AS (
+    SELECT
+        *
+    FROM asked
+    WHERE rank_asked=1
+),
+
+given_dedup AS (
+    SELECT
+        *
+    FROM given
+    WHERE rank_given=1
+),
+
+
+joined AS (
+    SELECT
+        a.company_id,
+        a.window_start,
+        a.asked_at,
+        g.given_at,
+        EXTRACT(EPOCH FROM (g.given_at - a.asked_at)) AS seconds_to_consented
+    FROM asked a
+    LEFT JOIN given g USING (company_id,window_start)
+)
+
+SELECT * FROM joined
+  );
+  
+[0m11:44:47.045417 [debug] [Thread-4 (]: SQL status: SELECT 10 in 0.008 seconds
+[0m11:44:47.047744 [debug] [Thread-4 (]: Using postgres connection "model.interview_project.int_consent__status_distribution"
+[0m11:44:47.047916 [debug] [Thread-1 (]: SQL status: SELECT 10 in 0.011 seconds
+[0m11:44:47.048158 [debug] [Thread-4 (]: On model.interview_project.int_consent__status_distribution: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "interview_project", "target_name": "dev", "node_id": "model.interview_project.int_consent__status_distribution"} */
+alter table "analytics_db"."main"."int_consent__status_distribution" rename to "int_consent__status_distribution__dbt_backup"
+[0m11:44:47.049926 [debug] [Thread-1 (]: Using postgres connection "model.interview_project.int_company__performance"
+[0m11:44:47.050266 [debug] [Thread-1 (]: On model.interview_project.int_company__performance: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "interview_project", "target_name": "dev", "node_id": "model.interview_project.int_company__performance"} */
+alter table "analytics_db"."main"."int_company__performance" rename to "int_company__performance__dbt_backup"
+[0m11:44:47.050501 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m11:44:47.052049 [debug] [Thread-4 (]: Using postgres connection "model.interview_project.int_consent__status_distribution"
+[0m11:44:47.052194 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m11:44:47.052374 [debug] [Thread-4 (]: On model.interview_project.int_consent__status_distribution: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "interview_project", "target_name": "dev", "node_id": "model.interview_project.int_consent__status_distribution"} */
+alter table "analytics_db"."main"."int_consent__status_distribution__dbt_tmp" rename to "int_consent__status_distribution"
+[0m11:44:47.053796 [debug] [Thread-1 (]: Using postgres connection "model.interview_project.int_company__performance"
+[0m11:44:47.054102 [debug] [Thread-1 (]: On model.interview_project.int_company__performance: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "interview_project", "target_name": "dev", "node_id": "model.interview_project.int_company__performance"} */
+alter table "analytics_db"."main"."int_company__performance__dbt_tmp" rename to "int_company__performance"
+[0m11:44:47.054260 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m11:44:47.055018 [debug] [Thread-4 (]: On model.interview_project.int_consent__status_distribution: COMMIT
+[0m11:44:47.055222 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m11:44:47.055406 [debug] [Thread-4 (]: Using postgres connection "model.interview_project.int_consent__status_distribution"
+[0m11:44:47.056195 [debug] [Thread-1 (]: On model.interview_project.int_company__performance: COMMIT
+[0m11:44:47.056415 [debug] [Thread-4 (]: On model.interview_project.int_consent__status_distribution: COMMIT
+[0m11:44:47.056665 [debug] [Thread-1 (]: Using postgres connection "model.interview_project.int_company__performance"
+[0m11:44:47.057054 [debug] [Thread-1 (]: On model.interview_project.int_company__performance: COMMIT
+[0m11:44:47.057905 [debug] [Thread-4 (]: SQL status: COMMIT in 0.001 seconds
+[0m11:44:47.058163 [debug] [Thread-1 (]: SQL status: COMMIT in 0.001 seconds
+[0m11:44:47.059542 [debug] [Thread-4 (]: Applying DROP to: "analytics_db"."main"."int_consent__status_distribution__dbt_backup"
+[0m11:44:47.060948 [debug] [Thread-1 (]: Applying DROP to: "analytics_db"."main"."int_company__performance__dbt_backup"
+[0m11:44:47.061282 [debug] [Thread-4 (]: Using postgres connection "model.interview_project.int_consent__status_distribution"
+[0m11:44:47.061663 [debug] [Thread-1 (]: Using postgres connection "model.interview_project.int_company__performance"
+[0m11:44:47.061917 [debug] [Thread-4 (]: On model.interview_project.int_consent__status_distribution: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "interview_project", "target_name": "dev", "node_id": "model.interview_project.int_consent__status_distribution"} */
+drop table if exists "analytics_db"."main"."int_consent__status_distribution__dbt_backup" cascade
+[0m11:44:47.062182 [debug] [Thread-1 (]: On model.interview_project.int_company__performance: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "interview_project", "target_name": "dev", "node_id": "model.interview_project.int_company__performance"} */
+drop table if exists "analytics_db"."main"."int_company__performance__dbt_backup" cascade
+[0m11:44:47.062799 [debug] [Thread-3 (]: SQL status: SELECT 10 in 0.025 seconds
+[0m11:44:47.064891 [debug] [Thread-3 (]: Using postgres connection "model.interview_project.int_consent__conversion_rate"
+[0m11:44:47.065040 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.002 seconds
+[0m11:44:47.065172 [debug] [Thread-4 (]: SQL status: DROP TABLE in 0.003 seconds
+[0m11:44:47.066609 [debug] [Thread-4 (]: On model.interview_project.int_consent__status_distribution: Close
+[0m11:44:47.066026 [debug] [Thread-1 (]: On model.interview_project.int_company__performance: Close
+[0m11:44:47.065327 [debug] [Thread-3 (]: On model.interview_project.int_consent__conversion_rate: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "interview_project", "target_name": "dev", "node_id": "model.interview_project.int_consent__conversion_rate"} */
+alter table "analytics_db"."main"."int_consent__conversion_rate" rename to "int_consent__conversion_rate__dbt_backup"
+[0m11:44:47.066998 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a9875b9c-ab8f-4b30-af12-41baf71d32ea', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaf256950>]}
+[0m11:44:47.067320 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a9875b9c-ab8f-4b30-af12-41baf71d32ea', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaf256b10>]}
+[0m11:44:47.067741 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m11:44:47.068055 [info ] [Thread-4 (]: 6 of 10 OK created sql table model main.int_consent__status_distribution ....... [[32mSELECT 10[0m in 0.07s]
+[0m11:44:47.068604 [info ] [Thread-1 (]: 4 of 10 OK created sql table model main.int_company__performance ............... [[32mSELECT 10[0m in 0.07s]
+[0m11:44:47.071522 [debug] [Thread-3 (]: Using postgres connection "model.interview_project.int_consent__conversion_rate"
+[0m11:44:47.072328 [debug] [Thread-3 (]: On model.interview_project.int_consent__conversion_rate: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "interview_project", "target_name": "dev", "node_id": "model.interview_project.int_consent__conversion_rate"} */
+alter table "analytics_db"."main"."int_consent__conversion_rate__dbt_tmp" rename to "int_consent__conversion_rate"
+[0m11:44:47.072123 [debug] [Thread-1 (]: Finished running node model.interview_project.int_company__performance
+[0m11:44:47.071828 [debug] [Thread-4 (]: Finished running node model.interview_project.int_consent__status_distribution
+[0m11:44:47.072779 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m11:44:47.073016 [debug] [Thread-1 (]: Began running node model.interview_project.company_performance
+[0m11:44:47.073737 [debug] [Thread-3 (]: On model.interview_project.int_consent__conversion_rate: COMMIT
+[0m11:44:47.074075 [info ] [Thread-1 (]: 8 of 10 START sql table model main.company_performance ......................... [RUN]
+[0m11:44:47.074319 [debug] [Thread-3 (]: Using postgres connection "model.interview_project.int_consent__conversion_rate"
+[0m11:44:47.074681 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.interview_project.int_company__performance, now model.interview_project.company_performance)
+[0m11:44:47.074881 [debug] [Thread-3 (]: On model.interview_project.int_consent__conversion_rate: COMMIT
+[0m11:44:47.075096 [debug] [Thread-1 (]: Began compiling node model.interview_project.company_performance
+[0m11:44:47.077106 [debug] [Thread-1 (]: Writing injected SQL for node "model.interview_project.company_performance"
+[0m11:44:47.077269 [debug] [Thread-3 (]: SQL status: COMMIT in 0.002 seconds
+[0m11:44:47.078589 [debug] [Thread-3 (]: Applying DROP to: "analytics_db"."main"."int_consent__conversion_rate__dbt_backup"
+[0m11:44:47.078908 [debug] [Thread-3 (]: Using postgres connection "model.interview_project.int_consent__conversion_rate"
+[0m11:44:47.079082 [debug] [Thread-3 (]: On model.interview_project.int_consent__conversion_rate: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "interview_project", "target_name": "dev", "node_id": "model.interview_project.int_consent__conversion_rate"} */
+drop table if exists "analytics_db"."main"."int_consent__conversion_rate__dbt_backup" cascade
+[0m11:44:47.079396 [debug] [Thread-1 (]: Began executing node model.interview_project.company_performance
+[0m11:44:47.081335 [debug] [Thread-1 (]: Writing runtime sql for node "model.interview_project.company_performance"
+[0m11:44:47.081492 [debug] [Thread-3 (]: SQL status: DROP TABLE in 0.002 seconds
+[0m11:44:47.082241 [debug] [Thread-3 (]: On model.interview_project.int_consent__conversion_rate: Close
+[0m11:44:47.082872 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a9875b9c-ab8f-4b30-af12-41baf71d32ea', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaf260950>]}
+[0m11:44:47.083256 [info ] [Thread-3 (]: 5 of 10 OK created sql table model main.int_consent__conversion_rate ........... [[32mSELECT 10[0m in 0.09s]
+[0m11:44:47.083760 [debug] [Thread-3 (]: Finished running node model.interview_project.int_consent__conversion_rate
+[0m11:44:47.083550 [debug] [Thread-1 (]: Using postgres connection "model.interview_project.company_performance"
+[0m11:44:47.084197 [debug] [Thread-1 (]: On model.interview_project.company_performance: BEGIN
+[0m11:44:47.084384 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:44:47.089599 [debug] [Thread-1 (]: SQL status: BEGIN in 0.005 seconds
+[0m11:44:47.089903 [debug] [Thread-1 (]: Using postgres connection "model.interview_project.company_performance"
+[0m11:44:47.090272 [debug] [Thread-1 (]: On model.interview_project.company_performance: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "interview_project", "target_name": "dev", "node_id": "model.interview_project.company_performance"} */
+
+  
+    
+
+  create  table "analytics_db"."main"."company_performance__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+WITH int_company__performance AS (SELECT * FROM "analytics_db"."main"."int_company__performance"),
+int_company__dim AS (SELECT * FROM "analytics_db"."main"."int_company__dim")
+
+SELECT
+    dim.*,
+    total_events,
+    total_pageviews,
+    total_consent_given,
+    total_consent_asked,
+    total_ui_actions,
+    distinct_countries
+FROM int_company__performance perf
+LEFT JOIN int_company__dim dim USING(company_id)
+  );
+  
+[0m11:44:47.092620 [debug] [Thread-1 (]: SQL status: SELECT 10 in 0.002 seconds
+[0m11:44:47.094693 [debug] [Thread-1 (]: Using postgres connection "model.interview_project.company_performance"
+[0m11:44:47.094888 [debug] [Thread-1 (]: On model.interview_project.company_performance: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "interview_project", "target_name": "dev", "node_id": "model.interview_project.company_performance"} */
+alter table "analytics_db"."main"."company_performance" rename to "company_performance__dbt_backup"
+[0m11:44:47.095252 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m11:44:47.096980 [debug] [Thread-1 (]: Using postgres connection "model.interview_project.company_performance"
+[0m11:44:47.097198 [debug] [Thread-1 (]: On model.interview_project.company_performance: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "interview_project", "target_name": "dev", "node_id": "model.interview_project.company_performance"} */
+alter table "analytics_db"."main"."company_performance__dbt_tmp" rename to "company_performance"
+[0m11:44:47.097518 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m11:44:47.098275 [debug] [Thread-1 (]: On model.interview_project.company_performance: COMMIT
+[0m11:44:47.098482 [debug] [Thread-1 (]: Using postgres connection "model.interview_project.company_performance"
+[0m11:44:47.098673 [debug] [Thread-1 (]: On model.interview_project.company_performance: COMMIT
+[0m11:44:47.099222 [debug] [Thread-1 (]: SQL status: COMMIT in 0.000 seconds
+[0m11:44:47.100449 [debug] [Thread-1 (]: Applying DROP to: "analytics_db"."main"."company_performance__dbt_backup"
+[0m11:44:47.100776 [debug] [Thread-1 (]: Using postgres connection "model.interview_project.company_performance"
+[0m11:44:47.100956 [debug] [Thread-1 (]: On model.interview_project.company_performance: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "interview_project", "target_name": "dev", "node_id": "model.interview_project.company_performance"} */
+drop table if exists "analytics_db"."main"."company_performance__dbt_backup" cascade
+[0m11:44:47.101848 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.001 seconds
+[0m11:44:47.102472 [debug] [Thread-1 (]: On model.interview_project.company_performance: Close
+[0m11:44:47.102797 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a9875b9c-ab8f-4b30-af12-41baf71d32ea', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaf2b8f10>]}
+[0m11:44:47.103143 [info ] [Thread-1 (]: 8 of 10 OK created sql table model main.company_performance .................... [[32mSELECT 10[0m in 0.03s]
+[0m11:44:47.103562 [debug] [Thread-1 (]: Finished running node model.interview_project.company_performance
+[0m11:44:47.155675 [debug] [Thread-2 (]: SQL status: SELECT 15196 in 0.116 seconds
+[0m11:44:47.157817 [debug] [Thread-2 (]: Using postgres connection "model.interview_project.int_consent__time"
+[0m11:44:47.158081 [debug] [Thread-2 (]: On model.interview_project.int_consent__time: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "interview_project", "target_name": "dev", "node_id": "model.interview_project.int_consent__time"} */
+alter table "analytics_db"."main"."int_consent__time" rename to "int_consent__time__dbt_backup"
+[0m11:44:47.158501 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m11:44:47.159932 [debug] [Thread-2 (]: Using postgres connection "model.interview_project.int_consent__time"
+[0m11:44:47.160123 [debug] [Thread-2 (]: On model.interview_project.int_consent__time: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "interview_project", "target_name": "dev", "node_id": "model.interview_project.int_consent__time"} */
+alter table "analytics_db"."main"."int_consent__time__dbt_tmp" rename to "int_consent__time"
+[0m11:44:47.160414 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m11:44:47.161079 [debug] [Thread-2 (]: On model.interview_project.int_consent__time: COMMIT
+[0m11:44:47.161275 [debug] [Thread-2 (]: Using postgres connection "model.interview_project.int_consent__time"
+[0m11:44:47.161446 [debug] [Thread-2 (]: On model.interview_project.int_consent__time: COMMIT
+[0m11:44:47.175603 [debug] [Thread-2 (]: SQL status: COMMIT in 0.014 seconds
+[0m11:44:47.178215 [debug] [Thread-2 (]: Applying DROP to: "analytics_db"."main"."int_consent__time__dbt_backup"
+[0m11:44:47.178514 [debug] [Thread-2 (]: Using postgres connection "model.interview_project.int_consent__time"
+[0m11:44:47.178793 [debug] [Thread-2 (]: On model.interview_project.int_consent__time: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "interview_project", "target_name": "dev", "node_id": "model.interview_project.int_consent__time"} */
+drop table if exists "analytics_db"."main"."int_consent__time__dbt_backup" cascade
+[0m11:44:47.180803 [debug] [Thread-2 (]: SQL status: DROP TABLE in 0.002 seconds
+[0m11:44:47.181407 [debug] [Thread-2 (]: On model.interview_project.int_consent__time: Close
+[0m11:44:47.181742 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a9875b9c-ab8f-4b30-af12-41baf71d32ea', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaf2cdfd0>]}
+[0m11:44:47.182304 [info ] [Thread-2 (]: 7 of 10 OK created sql table model main.int_consent__time ...................... [[32mSELECT 15196[0m in 0.18s]
+[0m11:44:47.182710 [debug] [Thread-2 (]: Finished running node model.interview_project.int_consent__time
+[0m11:44:47.183382 [debug] [Thread-4 (]: Began running node model.interview_project.consent_metrics
+[0m11:44:47.183695 [info ] [Thread-4 (]: 9 of 10 START sql table model main.consent_metrics ............................. [RUN]
+[0m11:44:47.184023 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.interview_project.int_consent__status_distribution, now model.interview_project.consent_metrics)
+[0m11:44:47.184247 [debug] [Thread-4 (]: Began compiling node model.interview_project.consent_metrics
+[0m11:44:47.186185 [debug] [Thread-4 (]: Writing injected SQL for node "model.interview_project.consent_metrics"
+[0m11:44:47.186866 [debug] [Thread-4 (]: Began executing node model.interview_project.consent_metrics
+[0m11:44:47.188586 [debug] [Thread-4 (]: Writing runtime sql for node "model.interview_project.consent_metrics"
+[0m11:44:47.189067 [debug] [Thread-4 (]: Using postgres connection "model.interview_project.consent_metrics"
+[0m11:44:47.189225 [debug] [Thread-4 (]: On model.interview_project.consent_metrics: BEGIN
+[0m11:44:47.189369 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m11:44:47.193082 [debug] [Thread-4 (]: SQL status: BEGIN in 0.004 seconds
+[0m11:44:47.193279 [debug] [Thread-4 (]: Using postgres connection "model.interview_project.consent_metrics"
+[0m11:44:47.193482 [debug] [Thread-4 (]: On model.interview_project.consent_metrics: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "interview_project", "target_name": "dev", "node_id": "model.interview_project.consent_metrics"} */
+
+  
+    
+
+  create  table "analytics_db"."main"."consent_metrics__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+WITH int_consent__conversion_rate AS (SELECT * FROM "analytics_db"."main"."int_consent__conversion_rate"),
+int_consent__status_distribution AS (SELECT * FROM "analytics_db"."main"."int_consent__status_distribution"),
+int_consent__time AS (SELECT * FROM "analytics_db"."main"."int_consent__time"),
+int_company__dim AS (SELECT * FROM "analytics_db"."main"."int_company__dim"),
+
+ median_int_consent__time AS (
+    SELECT
+        company_id,
+        PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY seconds_to_consented) AS median_seconds_to_consented
+    FROM int_consent__time
+    GROUP BY 1
+)
+
+SELECT
+    dim.*,
+    given_extrapolated_count,
+    asked_extrapolated_count,
+    consent_conversion_rate_pct,
+    total_events,
+    total_empty_consent_statuses,
+    total_full_opt_in_consent_statuses,
+    total_partial_opt_in_consent_statuses,
+    median_seconds_to_consented
+FROM int_company__dim dim
+LEFT JOIN int_consent__conversion_rate cr USING (company_id)
+LEFT JOIN int_consent__status_distribution dist USING (company_id)
+LEFT JOIN median_int_consent__time t USING (company_id)
+  );
+  
+[0m11:44:47.201189 [debug] [Thread-4 (]: SQL status: SELECT 40 in 0.008 seconds
+[0m11:44:47.202847 [debug] [Thread-4 (]: Using postgres connection "model.interview_project.consent_metrics"
+[0m11:44:47.203019 [debug] [Thread-4 (]: On model.interview_project.consent_metrics: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "interview_project", "target_name": "dev", "node_id": "model.interview_project.consent_metrics"} */
+alter table "analytics_db"."main"."consent_metrics" rename to "consent_metrics__dbt_backup"
+[0m11:44:47.203294 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m11:44:47.204575 [debug] [Thread-4 (]: Using postgres connection "model.interview_project.consent_metrics"
+[0m11:44:47.204767 [debug] [Thread-4 (]: On model.interview_project.consent_metrics: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "interview_project", "target_name": "dev", "node_id": "model.interview_project.consent_metrics"} */
+alter table "analytics_db"."main"."consent_metrics__dbt_tmp" rename to "consent_metrics"
+[0m11:44:47.205007 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m11:44:47.205558 [debug] [Thread-4 (]: On model.interview_project.consent_metrics: COMMIT
+[0m11:44:47.205722 [debug] [Thread-4 (]: Using postgres connection "model.interview_project.consent_metrics"
+[0m11:44:47.205864 [debug] [Thread-4 (]: On model.interview_project.consent_metrics: COMMIT
+[0m11:44:47.206417 [debug] [Thread-4 (]: SQL status: COMMIT in 0.000 seconds
+[0m11:44:47.207534 [debug] [Thread-4 (]: Applying DROP to: "analytics_db"."main"."consent_metrics__dbt_backup"
+[0m11:44:47.207797 [debug] [Thread-4 (]: Using postgres connection "model.interview_project.consent_metrics"
+[0m11:44:47.207964 [debug] [Thread-4 (]: On model.interview_project.consent_metrics: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "interview_project", "target_name": "dev", "node_id": "model.interview_project.consent_metrics"} */
+drop table if exists "analytics_db"."main"."consent_metrics__dbt_backup" cascade
+[0m11:44:47.208764 [debug] [Thread-4 (]: SQL status: DROP TABLE in 0.001 seconds
+[0m11:44:47.209360 [debug] [Thread-4 (]: On model.interview_project.consent_metrics: Close
+[0m11:44:47.209664 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a9875b9c-ab8f-4b30-af12-41baf71d32ea', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaf2cec50>]}
+[0m11:44:47.209977 [info ] [Thread-4 (]: 9 of 10 OK created sql table model main.consent_metrics ........................ [[32mSELECT 40[0m in 0.03s]
+[0m11:44:47.210312 [debug] [Thread-4 (]: Finished running node model.interview_project.consent_metrics
+[0m11:44:47.210820 [debug] [Thread-1 (]: Began running node model.interview_project.companies_kpis
+[0m11:44:47.211044 [info ] [Thread-1 (]: 10 of 10 START sql table model main.companies_kpis ............................. [RUN]
+[0m11:44:47.211262 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.interview_project.company_performance, now model.interview_project.companies_kpis)
+[0m11:44:47.211450 [debug] [Thread-1 (]: Began compiling node model.interview_project.companies_kpis
+[0m11:44:47.213003 [debug] [Thread-1 (]: Writing injected SQL for node "model.interview_project.companies_kpis"
+[0m11:44:47.213605 [debug] [Thread-1 (]: Began executing node model.interview_project.companies_kpis
+[0m11:44:47.215156 [debug] [Thread-1 (]: Writing runtime sql for node "model.interview_project.companies_kpis"
+[0m11:44:47.215721 [debug] [Thread-1 (]: Using postgres connection "model.interview_project.companies_kpis"
+[0m11:44:47.215925 [debug] [Thread-1 (]: On model.interview_project.companies_kpis: BEGIN
+[0m11:44:47.216108 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:44:47.219735 [debug] [Thread-1 (]: SQL status: BEGIN in 0.004 seconds
+[0m11:44:47.219923 [debug] [Thread-1 (]: Using postgres connection "model.interview_project.companies_kpis"
+[0m11:44:47.220110 [debug] [Thread-1 (]: On model.interview_project.companies_kpis: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "interview_project", "target_name": "dev", "node_id": "model.interview_project.companies_kpis"} */
+
+  
+    
+
+  create  table "analytics_db"."main"."companies_kpis__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+WITH company_performance AS (SELECT * FROM "analytics_db"."main"."company_performance"),
+consent_metrics AS (SELECT * FROM "analytics_db"."main"."consent_metrics")
+
+SELECT
+    cp.company_id,
+    cp.total_events,
+    total_pageviews,
+    total_consent_given,
+    total_consent_asked,
+    total_ui_actions,
+    distinct_countries
+    given_extrapolated_count,
+    asked_extrapolated_count,
+    consent_conversion_rate_pct,
+    total_empty_consent_statuses,
+    total_full_opt_in_consent_statuses,
+    total_partial_opt_in_consent_statuses,
+    median_seconds_to_consented
+FROM company_performance cp
+LEFT JOIN consent_metrics cm USING(company_id)
+  );
+  
+[0m11:44:47.222451 [debug] [Thread-1 (]: SQL status: SELECT 10 in 0.002 seconds
+[0m11:44:47.224182 [debug] [Thread-1 (]: Using postgres connection "model.interview_project.companies_kpis"
+[0m11:44:47.224430 [debug] [Thread-1 (]: On model.interview_project.companies_kpis: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "interview_project", "target_name": "dev", "node_id": "model.interview_project.companies_kpis"} */
+alter table "analytics_db"."main"."companies_kpis" rename to "companies_kpis__dbt_backup"
+[0m11:44:47.224811 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m11:44:47.228860 [debug] [Thread-1 (]: Using postgres connection "model.interview_project.companies_kpis"
+[0m11:44:47.229119 [debug] [Thread-1 (]: On model.interview_project.companies_kpis: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "interview_project", "target_name": "dev", "node_id": "model.interview_project.companies_kpis"} */
+alter table "analytics_db"."main"."companies_kpis__dbt_tmp" rename to "companies_kpis"
+[0m11:44:47.229538 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m11:44:47.230460 [debug] [Thread-1 (]: On model.interview_project.companies_kpis: COMMIT
+[0m11:44:47.230652 [debug] [Thread-1 (]: Using postgres connection "model.interview_project.companies_kpis"
+[0m11:44:47.230854 [debug] [Thread-1 (]: On model.interview_project.companies_kpis: COMMIT
+[0m11:44:47.231467 [debug] [Thread-1 (]: SQL status: COMMIT in 0.000 seconds
+[0m11:44:47.232791 [debug] [Thread-1 (]: Applying DROP to: "analytics_db"."main"."companies_kpis__dbt_backup"
+[0m11:44:47.233113 [debug] [Thread-1 (]: Using postgres connection "model.interview_project.companies_kpis"
+[0m11:44:47.233366 [debug] [Thread-1 (]: On model.interview_project.companies_kpis: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "interview_project", "target_name": "dev", "node_id": "model.interview_project.companies_kpis"} */
+drop table if exists "analytics_db"."main"."companies_kpis__dbt_backup" cascade
+[0m11:44:47.234656 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.001 seconds
+[0m11:44:47.235380 [debug] [Thread-1 (]: On model.interview_project.companies_kpis: Close
+[0m11:44:47.235777 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a9875b9c-ab8f-4b30-af12-41baf71d32ea', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaf2a3850>]}
+[0m11:44:47.236201 [info ] [Thread-1 (]: 10 of 10 OK created sql table model main.companies_kpis ........................ [[32mSELECT 10[0m in 0.02s]
+[0m11:44:47.236739 [debug] [Thread-1 (]: Finished running node model.interview_project.companies_kpis
+[0m11:44:47.238196 [debug] [MainThread]: Using postgres connection "master"
+[0m11:44:47.238423 [debug] [MainThread]: On master: BEGIN
+[0m11:44:47.238599 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m11:44:47.244589 [debug] [MainThread]: SQL status: BEGIN in 0.006 seconds
+[0m11:44:47.244878 [debug] [MainThread]: On master: COMMIT
+[0m11:44:47.245054 [debug] [MainThread]: Using postgres connection "master"
+[0m11:44:47.245191 [debug] [MainThread]: On master: COMMIT
+[0m11:44:47.245404 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m11:44:47.245547 [debug] [MainThread]: On master: Close
+[0m11:44:47.245771 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m11:44:47.245943 [debug] [MainThread]: Connection 'model.interview_project.int_consent__time' was properly closed.
+[0m11:44:47.246071 [debug] [MainThread]: Connection 'model.interview_project.companies_kpis' was properly closed.
+[0m11:44:47.246188 [debug] [MainThread]: Connection 'model.interview_project.consent_metrics' was properly closed.
+[0m11:44:47.246302 [debug] [MainThread]: Connection 'model.interview_project.int_consent__conversion_rate' was properly closed.
+[0m11:44:47.246580 [info ] [MainThread]: 
+[0m11:44:47.246816 [info ] [MainThread]: Finished running 10 table models in 0 hours 0 minutes and 0.90 seconds (0.90s).
+[0m11:44:47.247719 [debug] [MainThread]: Command end result
+[0m11:44:47.276215 [debug] [MainThread]: Wrote artifact WritableManifest to /app/target/manifest.json
+[0m11:44:47.277551 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/target/semantic_manifest.json
+[0m11:44:47.280925 [debug] [MainThread]: Wrote artifact RunExecutionResult to /app/target/run_results.json
+[0m11:44:47.281100 [info ] [MainThread]: 
+[0m11:44:47.281309 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m11:44:47.281466 [info ] [MainThread]: 
+[0m11:44:47.281620 [info ] [MainThread]: Done. PASS=10 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=10
+[0m11:44:47.282078 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 48 occurrences
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m11:44:47.282782 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 2.2237926, "process_in_blocks": "0", "process_kernel_time": 0.32354, "process_mem_max_rss": "133832", "process_out_blocks": "5585", "process_user_time": 2.080927}
+[0m11:44:47.283047 [debug] [MainThread]: Command `dbt run` succeeded at 11:44:47.283002 after 2.22 seconds
+[0m11:44:47.283254 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffbb346a50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffbb3f77d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb64bb410>]}
+[0m11:44:47.283446 [debug] [MainThread]: Flushing usage events
+[0m11:44:47.941236 [debug] [MainThread]: An error was encountered while trying to flush usage events

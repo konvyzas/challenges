@@ -127,10 +127,9 @@ models:
           Cleaned country code(s) (triple quotes removed), e.g. `ES`, `FR`.
         data_type: string
         tests:
-          - dbt_utils.length_equal:
-              value: 2
-              config:
-                severity: warn
+          - dbt_utils.expression_is_true:
+              arguments:
+                expression: "char_length(country) = 2"
 
       - name: region
         description: >
